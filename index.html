@@ -21,7 +21,7 @@
      
    <main class="wrapper">
  
-    <h2 class="subheader">An HTML/CSS/JS example by NAME HERE</h2>
+    <h2 class="subheader">An HTML/CSS/JS example by Nikaya Manalo</h2>
     <div id="output">
       <p>The following is a demonstration of a form that can be filled out and when data is entered, the data can be seen on the page.</p>
       <p>Any form fields that have names with an underscore between significant words, such as <b>First_Name</b> 
@@ -29,8 +29,46 @@
     <form method="get" action="" class="main-form">
       <div>
         <label for="FirstName">First Name</label><br>
-        <input type="text" name="First_Name" id="FirstName" placeholder="First Name" required autofocus>
+        <input type="text" name="First_Name" id="FirstName" placeholder="First Name" required autofocus> 
       </div>
+
+      <div>
+        <label for="LastName">Last Name</label><br>
+        <input type="text" name="Last_Name" id="LastName" placeholder="Last Name" required> 
+      </div>
+
+      <div>
+        <label for="Email">Email</label><br>
+        <input type="text" name="Email" id="Email" placeholder="Email" required> 
+      </div>
+
+      <div>
+        <label for="Phone">Phone</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required>
+      </div>
+
+      <div>
+        <fieldset>
+          <legend>Would you like to join our mailing list?</legend>
+          <label>
+            <input type="radio" name="Mailing_List" value="Yes" required> Yes<br>
+            <input type="radio" name="Mailing_List" value="No"> No
+          </label>
+        </fieldset>
+      </div>
+
+      <div>
+        <fieldset>
+          <legend>Interested In?</legend>
+          <label>
+            <input type="checkbox" name="Interested_In" value="Website"> Website <br>
+            <input type="checkbox" name="Interested_In" value="Shopping Cart"> Shopping Cart <br>
+            <input type="checkbox" name="Interested_In" value="JS Thingy"> JS Thingy <br>
+            <input type="checkbox" name="Interested_In" value="Lollipops"> Lollipops
+          </label>
+        </fieldset>
+      </div>
+
       <div>
         <input type="submit">
       </div>
@@ -38,7 +76,7 @@
   </div>
     <footer>
       <p><small>&copy; 2021-<span id="this-year"></span> by 
-          YOUR NAME HERE, All Rights Reserved ~ 
+          Nikaya Manalo, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
      </p>
