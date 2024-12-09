@@ -43,6 +43,16 @@
       </div>
 
       <div>
+        <label for="Adress">Address</label><br>
+        <input type="text" name="Address" id="Address" placeholder="Address" required> 
+      </div>
+
+      <div>
+        <label for="City">Address</label><br>
+        <input type="text" name="City" id="City" placeholder="City" required> 
+      </div>
+
+      <div>
         <label for="Phone">Phone</label><br>
         <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required>
       </div>
@@ -110,9 +120,17 @@
 
     if(queryString.length > 0){//data submitted
       let myOutput = `<div id="container">`;
-
       urlParams.forEach(function(value,key){
 
+
+        switch(key){
+          case "First_Name":
+          case "Last_Name":
+          case "Address":
+          case "City":
+            value = titleCase(value);
+          break;
+        }
         key = key.split("_").join(" ");
         myOutput += `<p>${key}: ${value}</p>`;
       });
@@ -120,6 +138,18 @@
       myOutput += `</div>`;
       document.querySelector("#output").innerHTML = myOutput;
     }
+
+    function titleCase(str){
+    str = str.split(" ");
+
+    for(let x=0;x<str.length;x++){
+        str[x] = str[x].charAt(0).toUpperCase(0) + str[x].slice(1).toLowerCase(0);
+    }
+
+    return str.join(" ");
+}
+
+
   </script>  
  </body>
 </html>
